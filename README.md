@@ -44,6 +44,10 @@ Berdasarkan rumusan masalah dan tujuan di atas, maka disimpulkan beberapa solusi
 1. Tahap persiapan data atau *data preparation* dilakukan dengan menggunakan beberapa teknik persiapan data, yaitu:
 - Melakukan Pembersihan data *(Data Cleaning)* dari column yang memiliki nilai korealsi yang rendah atau tidak memiliki variable parameter terkait untuk model *machine learning*.
 - Melakukan Encoding Fitur Kategori pada variable kategori fitur untuk model *machine learning*
-- 
+- Setelah itu, melakukan Reduksi Dimensi dengan metode PCA
+- Melakukan proses Train-test-Split dengan rentang 90:10
+- melakukan Standarisasi data train dan data test 
 
-2. Tahap membuat model *machine learning* untuk memprediksi harga batu permata dilakukan menggunakan model *machine learning* dengan 3 algoritma yang berbeda dan kemudian akan dilakukan evaluasi model untuk membandingkan performa model yang terbaik. Algoritma yang akan digunakan, yaitu Algoritma K-Nearest Neighbor, Algoritma Random Forest, dan Boosting Algorithm.
+2. Setelah melakukan persiapan data, maka dilakukan dengan modelling dan evaluasi modelling dari *machine learning* dengan menggunakan 3 algoritma yang digunakan, yaitu Algoritma K-Nearest Neighbor(KNN), Algoritma Random Forest, dan Algoritma Boosting.
+   - **Algoritma K-Nearest Neighbor (KNN)**
+       
