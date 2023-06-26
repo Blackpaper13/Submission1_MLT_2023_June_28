@@ -63,12 +63,13 @@ Cara Kerja dari Algoritma KNN adalah:
 
 Data teknik Algoritma KNN, untuk menentukan jarak terdekat dari data yang sudah melakukan modelling, dapat dilakukan dengan beberapa rumus matematis metriks.
 1. *Euclidean Distance*
+
    Euclidean Distance merupakan rumus yang paling umum digunakan untuk mengukur jarak dari data train dengan data test yang terdekat. rumus ini paling sederhana sehingga library basic Python kebanyakan menggunakan rumus dari *Euclidean Distance*. jika melihat dari 1 dimension dari data test dapat dirumuskan sebagai berikut:
    $$d(x1,x2)=\sqrt{\sum_{i=1}^n (x1_i-x2_i)^2}$$
    sedangkan jika lebih dari 1 dimensi data test dapat dirumuskan sebagai berikut :
    $$dis=\sqrt{\sum_(i=1)^n (x1_i - x2_i)^2 + (y1_i - y2_i)^2 +.....}$$
    **dengan dis merupakan nilai variable lebih dari 1 dimensi.
-2. Hamming Distance
-       $$d(a,b)=\frac{1}{n}\sum_{n=1}^{n=n} |a_i-b_i|$$
-3. Minkowski Distance
-       $$d(a,b)=\left(\sum_{i=1}^n |a_i-b_i|^p\right)^\frac{1}{p}$$ 
+3. Hamming Distance
+
+   Hamming Distance jika didefinisikan sebagai rumus yang digunakan untuk mencari 2 string yang panjang yang sama dengan tujuan untuk mencari penguukuran minimum banyaknya *subtitusi / pengganti* string untuk diubah menjadi string lain[[6]](https://www.trivusi.web.id/2022/06/jenis-distance-metric.html). rumusnya dapat kita lihat dengan rumus seperti berikut : 
+       $$d(x1,x2)=\frac{1}{n}\sum_{n=1}^{n=n} |x1_i-x2_i|$$
