@@ -69,7 +69,14 @@ Data teknik Algoritma KNN, untuk menentukan jarak terdekat dari data yang sudah 
    sedangkan jika lebih dari 1 dimensi data test dapat dirumuskan sebagai berikut :
    $$dis=\sqrt{\sum_(i=1)^n (x1_i - x2_i)^2 + (y1_i - y2_i)^2 +.....}$$
    **dengan dis merupakan nilai variable lebih dari 1 dimensi.
-3. Hamming Distance
+2. Hamming Distance
 
    Hamming Distance jika didefinisikan sebagai rumus yang digunakan untuk mencari 2 string yang panjang yang sama dengan tujuan untuk mencari penguukuran minimum banyaknya *subtitusi / pengganti* string untuk diubah menjadi string lain[[6]](https://www.trivusi.web.id/2022/06/jenis-distance-metric.html). rumusnya dapat kita lihat dengan rumus seperti berikut : 
        $$d(x1,x2)=\frac{1}{n}\sum_{n=1}^{n=n} |x1_i-x2_i|$$
+   - **Algoritma Random Forest**
+      Algoritma Random Forest adalah algoritma yang menggabungkan keluaran dari beberapa *decision tree* untuk mencapai satu hasil. Algoritma ini digunakan untuk mengklasifikasi data set dalam jumlah besar.[[7]](https://algorit.ma/blog/cara-kerja-algoritma-random-forest-2022/#:~:text=Random%20Forest%20adalah%20algoritma%20dalam,skala%20dan%20performa%20yang%20tinggi.)
+     Cara kerja dari Algoritma Random Fores, yaitu klasifikasi. Random Forest bekerja dengan mencari, menggabungkan, dan memprediksi dari *decision tree* untuk mendapatkan hasil yang lebih stabil dan akurat. Random Forest yang dibangun dibangun dengan metode bagging untuk meningkatkkan hasil keseluruhan dari subset fitur yang acak.
+     ![random forest](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/eb576cac-b401-4fed-abf0-474864e7117b)
+     Gambar 4. Random Forest.
+   - **Algoritma Boosting**
+     
