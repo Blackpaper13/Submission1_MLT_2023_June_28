@@ -79,4 +79,27 @@ Data teknik Algoritma KNN, untuk menentukan jarak terdekat dari data yang sudah 
      ![random forest](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/eb576cac-b401-4fed-abf0-474864e7117b)
      Gambar 4. Random Forest.
    - **Algoritma Boosting**
-     
+     Algoritma Boosting adalah metode algortima yang hasil analisis didapatkan dengan cara mengurangi kesalahan dalam label yang terdapat pada data[[8]]. Model Algortima seperti ini membuat kesalahan prediksi dipengaruhi oleh dari set data train yang dilatih secara berurutan untuk meningkatkan akurasi sistem sekeluruhan.
+      
+![xgboost_illustration](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/426be3e3-b39a-4da9-a032-674148f01750)
+
+Gambar 5. Boosting Algorithm
+      Cara kerja dari Algoritma ini sebenarnya merupaakn re-desain dari algoritma Random Forest, yaitu menggunakan pendekatan *Tree Decision*. namun, untuk menentukan dan tingkat akurasi prediksi sangat bergantung pada seberapa besar dataset yang dilatih dengan data yang dijadikan sample. dataset yang dilatih akan melakukan latihan atau train kepada dataset sample yang mana akan membentuk seperti decision tree.
+
+## Data Understanding
+   Dalaml proyek ini, dataset yang dijadikan sebagai bahan proyek diambil dari situs Kaggle, yaitu House price Prediction[[9]](https://www.kaggle.com/datasets/shree1992/housedata). berikut langkah - langkah dari hasil proyek yang saya kerjakan :
+   1. **Deskripsi Variable**
+      Pada bagian ini, setelah saya melakukan Download dataset yang saya lakukan, saya kemudian melakukan ekstraksi dari file House Price Prediction. bentuk file yang saya ekstrack berbentuk *csv*. setelah itu saya simpan di */content/files/* dan menampilkan informasi data tersebut dengan syntak *rumah.info()* maka hasilnya akan muncul seperti berikut :
+**table 1. Deskripsi variable**
+| No | Column | Non-Null Count | Dtype|
+|---|---------|----------------|---------|
+| 0 | date    | 26967 non-null | float64 |
+| 1 | price   | 26967 non-null | object  |
+| 2 | color   | 26967 non-null | object  |
+| 3 | clarity | 26967 non-null | object  |
+| 4 | depth   | 26967 non-null | float64 |
+| 5 | table   | 26967 non-null | float64 |
+| 6 | x       | 26967 non-null | float64 |
+| 7 | y       | 26967 non-null | float64 |
+| 8 | z       | 26967 non-null | float64 |
+| 9 | price   | 26967 non-null | object  |
