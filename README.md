@@ -76,8 +76,9 @@ Data teknik Algoritma KNN, untuk menentukan jarak terdekat dari data yang sudah 
    - **Algoritma Random Forest**
       Algoritma Random Forest adalah algoritma yang menggabungkan keluaran dari beberapa *decision tree* untuk mencapai satu hasil. Algoritma ini digunakan untuk mengklasifikasi data set dalam jumlah besar.[[7]](https://algorit.ma/blog/cara-kerja-algoritma-random-forest-2022/#:~:text=Random%20Forest%20adalah%20algoritma%20dalam,skala%20dan%20performa%20yang%20tinggi.)
      Cara kerja dari Algoritma Random Fores, yaitu klasifikasi. Random Forest bekerja dengan mencari, menggabungkan, dan memprediksi dari *decision tree* untuk mendapatkan hasil yang lebih stabil dan akurat. Random Forest yang dibangun dibangun dengan metode bagging untuk meningkatkkan hasil keseluruhan dari subset fitur yang acak.
-     ![random forest](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/eb576cac-b401-4fed-abf0-474864e7117b)
-     Gambar 4. Random Forest.
+![random forest](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/eb576cac-b401-4fed-abf0-474864e7117b)
+
+Gambar 4. Random Forest.
    - **Algoritma Boosting**
      Algoritma Boosting adalah metode algortima yang hasil analisis didapatkan dengan cara mengurangi kesalahan dalam label yang terdapat pada data[[8]]. Model Algortima seperti ini membuat kesalahan prediksi dipengaruhi oleh dari set data train yang dilatih secara berurutan untuk meningkatkan akurasi sistem sekeluruhan.
       
@@ -89,17 +90,45 @@ Gambar 5. Boosting Algorithm
 ## Data Understanding
    Dalaml proyek ini, dataset yang dijadikan sebagai bahan proyek diambil dari situs Kaggle, yaitu House price Prediction[[9]](https://www.kaggle.com/datasets/shree1992/housedata). berikut langkah - langkah dari hasil proyek yang saya kerjakan :
    1. **Deskripsi Variable**
-      Pada bagian ini, setelah saya melakukan Download dataset yang saya lakukan, saya kemudian melakukan ekstraksi dari file House Price Prediction. bentuk file yang saya ekstrack berbentuk *csv*. setelah itu saya simpan di */content/files/* dan menampilkan informasi data tersebut dengan syntak *rumah.info()* maka hasilnya akan muncul seperti berikut :
-**table 1. Deskripsi variable**
-| No | Column | Non-Null Count | Dtype|
-|---|---------|----------------|---------|
-| 0 | date    | 26967 non-null | float64 |
-| 1 | price   | 26967 non-null | object  |
-| 2 | color   | 26967 non-null | object  |
-| 3 | clarity | 26967 non-null | object  |
-| 4 | depth   | 26967 non-null | float64 |
-| 5 | table   | 26967 non-null | float64 |
-| 6 | x       | 26967 non-null | float64 |
-| 7 | y       | 26967 non-null | float64 |
-| 8 | z       | 26967 non-null | float64 |
-| 9 | price   | 26967 non-null | object  |
+      Pada bagian ini, setelah saya melakukan Download dataset yang saya lakukan, saya kemudian melakukan ekstraksi dari file House Price Prediction. bentuk file yang saya ekstrack berbentuk *csv*. setelah itu saya simpan di */content/files/* dan dilakukan pembersihan data *(Data Cleaning)*. lalu setelah dipastikan data yang sudah dibersihkan tidak bernilai null, saya melakukan pengecekan nilai :
+      
+ **No**|**Column**|**Non-Null Count**|**DType**
+:-----:|:-----:|:-----:|:-----:|
+1|date|4600 non-null|Object|
+2|price|4600 non-null|float64|
+3|Bedrooms |4600 non-null|float64|
+4|Bathrooms|4600 non-null|float64|
+5|sqft_living |4600 non-null|int64|
+6|sqft_lot|4600 non-null|int64|
+7|floors|4600 non-null|float64|
+8|waterfront|4600 non-null|int64|
+9|view|4600 non-null|int64|
+10|condition|4600 non-null|int64|
+11|sqft_above|4600 non-null|int64|
+12|sqft_basement|4600 non-null|int64|
+13|yr_built|4600 non-null|int64|
+14|yr_renovated|4600 non-null|int64|
+15|street| 4600 non-null | object |
+16|city|4600 non-null | object |
+17|statecity| 4600 non-null | object |
+18|country| 4600 non-null| object |
+
+
+### Variable-variable pada dataset yang ditampilkan sebagai berikut :
+- date  merujuk kepada tanggal Rumah terjual
+- Price merujuk kepada harga rumah yang terjual dalam kurs USD Amerika Serikat
+- Bedrooms merujuk kepada jumlah kamar tidur
+- Bathrooms merujuk kepada jumlah kamar mandi
+- sqft_living merujuk kepada luas rumah
+- sqft_lot merujuk kepada luas tanah
+- waterfront merujuk kepada apakah ada air sekitar rumah
+- view merujuk kepada pemandangan luar rumah
+- condition merujuk kepada kondisi rumah nilaianya 1 atau 0
+- sqft_above merujuk kepada luas total rumah
+- sqft_basement merujuk kepada luas ruangan basement
+- yr_built merujuk kepada tahun berdiri bangunan rumah
+- yr_renovated merujuk kepada tahun rumah terakhir direnovasi
+- street merujuk kepada jalan rumah
+- city merujuk kepada kota
+- statezip merujuk kepada kode pos
+- country merujuk kepada negara
