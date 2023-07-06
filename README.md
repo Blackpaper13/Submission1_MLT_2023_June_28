@@ -273,4 +273,4 @@ Namun dari 10 dataset yang saya tampilkan beberapa nilai prediksi Algoritma Rand
 
 ### Referensi
 ***
-[1] "Kasus diabetes anak meningkat ‘sangat mengkhawatirkan’, imbas makanan-minuman manis 'mudah dijangkau' - 'regulasi belum cukup melindungi,' kata peneliti," BBC, 3 Juli 2023. [Online]. Available: https://www.bbc.com/indonesia/articles/clj6rene4y7o. [Accessed: 3 Juli 2023].
+[1] "Apa Itu Rumah? Ini Penjelasannya dari Berbagai Aspek dan 5 Fungsinya" Rumah.com, 16 Februari 2023. [Online]. Available: https://www.rumah.com/panduan-properti/apa-itu-rumah-60592. [Accessed: 16 Juni 2023].
