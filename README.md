@@ -77,44 +77,45 @@ Data teknik Algoritma KNN, untuk menentukan jarak terdekat dari data yang sudah 
       Algoritma Random Forest adalah algoritma yang menggabungkan keluaran dari beberapa *decision tree* untuk mencapai satu hasil. Algoritma ini digunakan untuk mengklasifikasi data set dalam jumlah besar.[[7]](https://algorit.ma/blog/cara-kerja-algoritma-random-forest-2022/#:~:text=Random%20Forest%20adalah%20algoritma%20dalam,skala%20dan%20performa%20yang%20tinggi.)
      Cara kerja dari Algoritma Random Fores, yaitu klasifikasi. Random Forest bekerja dengan mencari, menggabungkan, dan memprediksi dari *decision tree* untuk mendapatkan hasil yang lebih stabil dan akurat. Random Forest yang dibangun dibangun dengan metode bagging untuk meningkatkkan hasil keseluruhan dari subset fitur yang acak.
 ![random forest](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/eb576cac-b401-4fed-abf0-474864e7117b)
-
 Gambar 4. Random Forest.
    - **Algoritma Boosting**
      Algoritma Boosting adalah metode algortima yang hasil analisis didapatkan dengan cara mengurangi kesalahan dalam label yang terdapat pada data[[8]]. Model Algortima seperti ini membuat kesalahan prediksi dipengaruhi oleh dari set data train yang dilatih secara berurutan untuk meningkatkan akurasi sistem sekeluruhan.
       
 ![xgboost_illustration](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/426be3e3-b39a-4da9-a032-674148f01750)
-
 Gambar 5. Boosting Algorithm
-      Cara kerja dari Algoritma ini sebenarnya merupaakn re-desain dari algoritma Random Forest, yaitu menggunakan pendekatan *Tree Decision*. namun, untuk menentukan dan tingkat akurasi prediksi sangat bergantung pada seberapa besar dataset yang dilatih dengan data yang dijadikan sample. dataset yang dilatih akan melakukan latihan atau train kepada dataset sample yang mana akan membentuk seperti decision tree.
+      Cara kerja dari Algoritma ini sebenarnya merupaakn re-desain dari algoritma Random Forest, yaitu menggunakan pendekatan *Tree Decision*. namun, untuk menentukan dan tingkat akurasi prediksi sangat bergantung pada seberapa besar dataset yang dilatih dengan data yang dijadikan sample. dataset yang dilatih akan melakukan latihan atau train kepada dataset sample yang mana akan membentuk seperti decision tree. rumus untuk mencari Komputasi final dari algoritma Boosting adalah : 
+        ![18-09-22 Ade 6](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/772999d0-ffca-4e2e-b7df-02f54beb3468)
+      
 
 ## Data Understanding
    Dalaml proyek ini, dataset yang dijadikan sebagai bahan proyek diambil dari situs Kaggle, yaitu House price Prediction[[9]](https://www.kaggle.com/datasets/shree1992/housedata). berikut langkah - langkah dari hasil proyek yang saya kerjakan :
    1. **Deskripsi Variable**
       Pada bagian ini, setelah saya melakukan Download dataset yang saya lakukan, saya kemudian melakukan ekstraksi dari file House Price Prediction. bentuk file yang saya ekstrack berbentuk *csv*. setelah itu saya simpan di */content/files/* dan dilakukan pembersihan data *(Data Cleaning)*. lalu setelah dipastikan data yang sudah dibersihkan tidak bernilai null, saya melakukan pengecekan nilai :
       
- **No**|**Column**|**Non-Null Count**|**DType**
-:-----:|:-----:|:-----:|:-----:|
-1|date|4600 non-null|Object|
-2|price|4600 non-null|float64|
-3|Bedrooms |4600 non-null|float64|
-4|Bathrooms|4600 non-null|float64|
-5|sqft_living |4600 non-null|int64|
-6|sqft_lot|4600 non-null|int64|
-7|floors|4600 non-null|float64|
-8|waterfront|4600 non-null|int64|
-9|view|4600 non-null|int64|
-10|condition|4600 non-null|int64|
-11|sqft_above|4600 non-null|int64|
-12|sqft_basement|4600 non-null|int64|
-13|yr_built|4600 non-null|int64|
-14|yr_renovated|4600 non-null|int64|
-15|street| 4600 non-null | object |
-16|city|4600 non-null | object |
-17|statecity| 4600 non-null | object |
-18|country| 4600 non-null| object |
+         **No**|**Column**|**Non-Null Count**|**DType**
+        :-----:|:-----:|:-----:|:-----:|
+        1|date|4600 non-null|Object|
+        2|price|4600 non-null|float64|
+        3|Bedrooms |4600 non-null|float64|
+        4|Bathrooms|4600 non-null|float64|
+        5|sqft_living |4600 non-null|int64|
+        6|sqft_lot|4600 non-null|int64|
+        7|floors|4600 non-null|float64|
+        8|waterfront|4600 non-null|int64|
+        9|view|4600 non-null|int64|
+        10|condition|4600 non-null|int64|
+        11|sqft_above|4600 non-null|int64|
+        12|sqft_basement|4600 non-null|int64|
+        13|yr_built|4600 non-null|int64|
+        14|yr_renovated|4600 non-null|int64|
+        15|street| 4600 non-null | object |
+        16|city|4600 non-null | object |
+        17|statecity| 4600 non-null | object |
+        18|country| 4600 non-null| object |
 
 
 ### Variable-variable pada dataset yang ditampilkan sebagai berikut :
+***
 - date  merujuk kepada tanggal Rumah terjual
 - Price merujuk kepada harga rumah yang terjual dalam kurs USD Amerika Serikat
 - Bedrooms merujuk kepada jumlah kamar tidur
@@ -132,3 +133,141 @@ Gambar 5. Boosting Algorithm
 - city merujuk kepada kota
 - statezip merujuk kepada kode pos
 - country merujuk kepada negara
+### EDA - Handling Outliers 
+setelah melakukan data understanding, selanjutnya adalah melakukan outliers terhadap data yang memiliki tingakt reduksi yang tinggi. hasilnya outliers seperti berikut:
+- Price </br>
+  ![price_sns](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/0eea8994-75a6-455d-b73d-e012bc9efeec) </br>
+  Gambar 6. Price </br>
+- Bedrooms </br>
+![bedrooms_sns](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/fc9183c6-9f15-4b58-a628-557fd2b81fa2) </br>
+Gambar 7. Bedrooms </br>
+- bathroom </br>
+![bathrooms](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/e0f65f75-dc92-4543-a2f8-8263ceb57630) </br>
+Gambar 8. Bathrooms </br>
+- sqft_living </br>
+![sqft_living_sns](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/ec4bcd82-903a-4558-8f31-21b90ea3a102) </br>
+Gambar 9. sqft_living </br>
+- sqft_lot </br>
+![sqft_lot](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/6c91111a-de63-484b-90a9-b2ccc7e31e24) </br>
+Gambar 10. sqft_lot </br>
+- sqft_above </br>
+![sqft_above_sns](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/b6eaa045-938b-4326-bacd-00e985c29cd7) </br>
+Gambar 11. sqft_above </br>
+untuk menghilangkan residu dari dataset diatas, maka menggunakan metode IQR untuk menghasilkan tingkat residu dataset yang bisa ditoleransi.
+hasil dari IQR dapat dilihat sebagai berikut: </br>
+![IQR hasil](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/c2037817-c858-4809-b936-154865d91df4) </br>
+Gambar 12. IQR metode 
+
+### EDA - Univariate Analysis
+***
+Proses univariate data analysis pada masing-masing fitur dan numerik.
+   - Categorical features
+     yang termasuk kedalam categorical features adalah kategori yang bernilai object. pada hasil ini, nilai dari street, date, dan statezip memiliki nilai *unique* yang terlalu banyak. namun saya biarkan dahulu untuk tidak menghapusnya karena jumlah dataset yang masih dibawah 4000.
+   - Numerical features
+     yang termasuk kedalam numerical features adalah kategori yang berniali selain object, bisa berbentuk int64 atau float64. pada nilai seperti condition, view, dan waterfront perlu dihapus karena tidak mempengaruhi dan bukan key dari mencari sebuah rumah yang sesuai.
+hasil dari univariate analysis dapat dilihat pada gambar berikut ini: </br>
+![cat dan num](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/1702c4c5-547e-4a10-b6fb-091acd4f148b) </br>
+Gambar 13. Cat dan Num Features
+
+selanjutnya dilakukan analisis numeric features distribution dari array numeric, hasilnya bahwa nilai distribusi pada price, sqft_living, sqft_lot, dan sqft_above memiliki distribusi yang cukup baik, yang mana dapat kita lihat pada gambar berikut : 
+![pairplot](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/7923fccd-3619-48f8-aaef-abb9df7ce4ba)</br>
+Gambar 14. Distribusi nilai pada numeric features.
+
+sehingga dapat kita simpulkan bahwa untuk mencari korelasi yang terbaik dapat menggunakan price dahulu untuk mencari korelasi dengan categorical features.
+
+### Correlation Matrix: 
+setelah mendapatkan nilai distribusi nilai numeric yaitu price, selanjutnya kita melihat apakah nilai price memiliki korelasi terhadap kepada object yang masuk categorical features. hasilnya dapat dilihat pada gambar berikut (saya tampilkan pengaruh price terhadap object date, street, city, statezip, dan country)
+</br>
+![pengaruh price dengan date dan street](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/550f8d94-d2f8-4809-a59f-1e1b989ff703)</br>
+Gambar 15. Rata-rata Price dengan date dan street </br>
+![pengaruh price dengan city dan statezip](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/012b279e-7dcc-4261-8d58-bcb37320adb2)
+Gambar 16. Rata-rata price dengan city dan statezip
+</br>
+
+kemudian dari hasil ini dapat dikatakan bahwa price memiliki cukup pengaruh dengan kelima objek yang pada dictonary categorical_fitur. lalu kita melihat apakah bagian dictonary numerik_fitur memiliki nilai pengaruh yang berkaitan. hasil ini dapat dijabarkan dengan memakai pairplot. namun untuk lebih sederhana dan dapat dipahami, saya menggunaakn metode *correlation_matrix*. hasilnya dapat dilihat pada gambar :
+berikut :
+![matrikx](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/f628cac5-f5d2-4942-9338-04b768a33112) </br>
+gambar 17. Matrix Korelasi dari numeric fitur
+hasil dari *correlation matrix* dapat dijelaskan sebagai berikut :
+- nilai pada yr_renovated dan sqft_basement merupakan nilai korelasi yang paling rendah, sehingga tidak terpengaruh terhadap prediksi harga rumah.
+- sqft_living memiliki nilai korelasi yang tinggi dengan sqft_above. berarti untuk memprediksi harga rumah sangat berpengaruh dengan luang ruangan pada rumah dengan luas total bangunan.
+- pada bagian bedrooms, bathrooms, floors, dan yr_built memiliki nilai korelasi yang cukup tinggi dan dapat dijadikan sebagai pendukung dari prediksi harga rumah.
+
+### Data Preparation
+***
+setelah mengetahui dari nilai korelasi yang sudah didapatkan, lalu kita akan menyiapkan data dari dataset cat_fitur untuk dilakukan Encoding dengan metode *One Hot Encoding*. setelah itu, dilakukan Reduksi dimensi dari dengan PCA. karena sqft_above dengan sqft_living memiliki korelasi yang tinggi, sehingga dapat dilakukan Reduksi dimensi. hasil dapat dilihat pada gambar berikut :
+![Capture](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/59045bc0-7c6b-45f2-a59f-1fdb9cebdfca)
+![Capture1](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/c4726fd9-c28e-483d-950c-7cee132479f2)
+</br>
+Gambar 18. PCA antara sqft_living dengan sqft_above dan hasil perhintungan rasio variasi dari sqft_living dengan sqft_above
+
+setelah melakukan reduksi dimensi, dilanjutkan dengan melakukan standarisasi dengan tujuan agar mempersiapkan model dengan mengurangkan mean lalu dibagi dengan standar deviasi untuk menggeser distribusi. terakhir, melakukan train, test, dan split yang mana model ini terdiri atas 80:20 (train : test) yang berasal dari hasil standarisasi yang sudah dipersiapkan sebelumnya. hasilnya adalah untuk sample total yaitu 3692 :
+- dataset yang masuk kedalam train sebanyak 2953
+- dataset yang masuk kedalam test sebanyak 739.
+### Modelling
+***
+Pada tahap ini, saya menggunakan 3 metode Algoritma untuk melakukan prediksi, yaitu K-Nearest Neighbor (KNN), Random Forest, dan Algortima Boosting. berikut penjelasan dari ketiga metode algoritma ini:
+- Algoritma K-Nearest Neighbor (KNN)
+Algoritma K-Nearest Neigbor merupakan algoritma yang termasuk kategori algoritma *supervised learning* paling mudah dipelajari. output yang dihasilkan dari algortma ini adalah model yang diklasifikasikan berdasarkan kategori k-tetangga terdekat. tujuan utama ada algoritma ini adalah untuk mengklasifikasikan object yang di lakukan testing dari sample-sample dari training data. 
+Kelebihan dalam menggunakan algoritma KNN adalah [[10]](https://medium.com/nerd-for-tech/whats-the-knn-74e84458bd24):
+    1. Algortima ini merupakan salah satu yang paling mudah digunakan, hanya membutuhkan k dan *distance formula*
+    2. cepat melakukan dan waktu kalkulasi yang relatif hasilnya tinggi dan akurat. sejak itu algoritma ini sering disebut sebagai algoritma untuk pemalas pembelajar atau hanya dibutuhkan untuk cepat selesai.
+    3. Serbaguan, dapat digunakan untuk mencari regresi atau klasifikasi.
+
+    Namun dari 3 kelebihan diatas, terdapat masalah yang sering menjadi kekurangan jika menggunakan KNN ini:
+    1. Karena menggunakan sumber daya komputasi, jadi memerlukan komputasi yang tinggi, pelatihan yang data yang banyak dan memory yang besar untuk hanya membuat sebuah model *machine learning*
+    2. karena data yang besar dan random jenis datanya, sehingga sangat sensitif terhadap fitur / sample data yang tidak relevan dan skala data.
+    3. karena semakin banyak datanya, maka semakin lambat kinerja model *machine learning* tersebut.
+    
+- Algoritma Random Forest
+Algorima ini merupakan sebuah inovasi pengembangan yang menjawab permasalahan dari algoritma KNN tersebut. bedanya, jika KNN menggunakan dataset yang menghasilkan model k terdekat, algoritma ini lain pendekatannya. Random Forest / hutan yang acak seperti namanya, untuk memprediksi dari sebuah dataset menggunakan *tree* atau pohon yang mengeluarkan prediksi kelas. dari prediksi ini akan mencari kandidat prediksi yang menghasilkan akurasi yang lebih tinggi sehingga tidak terjadi overfitting / prediksi yang diluar jangkauan. algoritma ini sering disebut sebagai algoritma peramal karena algoritma ini banyak digunakan untuk prediksi keinginan para pembeli walau orang tersebut tidak melihatnya lagi atau membaca keinginan pembeli[[11]](https://www.trivusi.web.id/2022/08/algoritma-random-forest.html).
+    Kelebihan dari algoritma Random Forest adalah : 
+    1. Karena mengambil kandidat yang terbaik, jadi untuk outlier data, ini merupakan salah satu yang terbaik
+    2. algoritma ini bekerja dengan baik dengan data non-linear
+    3. overfitting risk lebih rendah
+    4. lebih efisien dalam kumpulan data besar
+    5. akurasi lebih tinggi dibandingkan dengan algoritma lainnya
+
+    Namun terdapat kekurangan jika menggunakan algoritma random Forest :
+    1. sering terjadi Bias prediksi jika berhadapan dengan variable kategori
+    2. Algoritma ini merupakan salah satu yang sering menghabiskan komputasi yang sangat besar
+    3. Tidak cocok untuk mengggunakan dalam situasi dataset yang linear
+
+- Algoritma Boosting
+Pada algoritma ini terdapat 2 jenis Boosting, yaitu AdaBoost dan GradientBoost. AdaBoost *(Adaptive Boosting)* adalah algoritma yang pendekatannya memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi prediktor[[12]](https://dqlab.id/algoritma-machine-learning-yang-perlu-dipelajari). algoritma ini sangat mirip seperi random forest namun bedanya, forest yang dibangun adalah stumps atau pohon yang terbuat dari 1 cabang dan 2 anakan daun serta tidak memiliki bobot kandidat yang sama pada prediksinya. semakin kecil stumps, maka nilai kemungkinan akan semakin kecil. 
+sedangkan GradientBoost adalah sebuah algoritma yang mengandalkan *weak learner* atau bisa dikatakan sebagai model yang lemah untuk melakukan koreksi dan perbaikan prediksi sebelumnya dengan memperhitungkan kesalahan pada prediksi tersebut[[13]](https://www.trivusi.web.id/2023/03/algoritma-gradient-boosting.html). Jadi bisa dikatakan sebagai algoritma koreksi yang memakai model - model yang dianggap lemah untuk dilakukan koreksi. Cara kerja dari Algoritma Gradient Boost adalah menggabungkan beberapa model pada tree yang lemah untuk menjadi sebuah model yang baru dan lebih akurat. bedanya dengan AdaBoost  adalah pada tree, terdapat cabang-cabang yang mengeluarkan nilai yang lemah tapi tetap digunakan untuk membuat prediksi yang baru.
+
+Kelebihan pada Algoritma ini adalah : 
+- Algoritma ini merupakan salah satu algoritma yang memiliki tingkat akurasi yang tinggi.
+- data yang diperlukan tidak kompleks dan persyaratan khusus
+- kecepatan komputasi yang tinggi walau data yang diperlukan banyak.
+
+Namun dari kelebihan tersebut, muncul masalah yang ada pada algoritma boosting ini :
+- karena tingkat akurasi yang tinggi, maka diperlukan kalkulasi dan perhitungan yang cermat
+- mudah mengalami overfitting  / model yang prediksi di luar jangkauan
+- data yang diperlukan sangat besar
+
+### Evaluasi Modelling
+***
+pada bagian ini, saya melakukan evaluasi dari ketiga algoritma yang saya gunakan untuk dilakukan prediksi dari ketiga algoritma tersebut, manakah yang merupakan algoritma yang paling mendekati dari prediksi dari hasil test sebenarnya. 
+pertama, saya menggunakan rumus MSE atau *Mean Squared Error* yang berguna untuk menjumlahkan selisih kuadrat rata-rata nila sebenarnya dengan nilai prediksi. rumus MSE dapat dinyatakan sebagai berikut : 
+
+$$MSE=\frac{1}{n}\sum_{i=1}^{n} (A_t-F_t)^2$$
+dimana : 
+A_t = Nilai aktual permintaan
+F_t = Nilai hasil Prediksi
+n = Banyaknya data.
+
+dengan rumus diatas, dapat kita memprediksi bahwa semakin kecil nilai regresi dari MSE, maka semakin baik model regresi untuk mempredksi nilai target.
+Hasil dair MSE dapat dilihat pada gambar yang bawah ini : 
+![adlawnknd](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/9b8f6dc8-6a5b-4345-ad80-48923b681dd5)
+Gambar 19. Hasil menggunakan MSE untuk 3 algoritma yang sudah dilakukan evaluasi.
+
+dari hasil evaluasi dari 3 algoritma tersebut, Algoritma Random Forest merupakan Algoritma yang membuat model yang mendekati dengan nilai prediksi sebenarnya.
+hasil dari ketiga algoritma tersebut dapat dilihat pada tabel berikut ini : 
+
+![adawdaw](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/80923a92-0372-47ad-ac0a-0d3ad5f7dc40)
+Gambar 20. Tabel hasil Evaluasi dari 3 algoritma 
+
+### Referensi
+***
