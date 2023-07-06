@@ -273,25 +273,29 @@ Namun dari 10 dataset yang saya tampilkan beberapa nilai prediksi Algoritma Rand
 
 ### Referensi
 ***
-​​[1]	“Gradient Boosting: Pengertian, Cara Kerja, dan Kegunaannya - Trivusi.” https://www.trivusi.web.id/2023/03/algoritma-gradient-boosting.html (diakses 6 Juli 2023). 
+​​[1]	“Analisis Klasifikasi Menggunakan Metode Gradient Boosting Machine (GBM) dan Light Gradient Boosting Machine (LGBM).” http://etd.repository.ugm.ac.id/penelitian/detail/211569 (diakses 6 Juli 2023). 
 
-​[2]	“Algoritma Machine Learning yang Harus Kamu Pelajari di Tahun...” https://dqlab.id/algoritma-machine-learning-yang-perlu-dipelajari (diakses 6 Juli 2023). 
+​[2]	“House price prediction | Kaggle.” https://www.kaggle.com/datasets/shree1992/housedata (diakses 6 Juli 2023). 
 
-​[3]	“Algoritma Random Forest: Pengertian dan Kegunaannya - Trivusi.” https://www.trivusi.web.id/2022/08/algoritma-random-forest.html (diakses 6 Juli 2023). 
+​[3]	“What’s the KNN?. Understanding the Lazy Learner… | by Jisha Obukwelu | Nerd For Tech | Medium.” https://medium.com/nerd-for-tech/whats-the-knn-74e84458bd24 (diakses 6 Juli 2023). 
 
-​[4]	“What’s the KNN?. Understanding the Lazy Learner… | by Jisha Obukwelu | Nerd For Tech | Medium.” https://medium.com/nerd-for-tech/whats-the-knn-74e84458bd24 (diakses 6 Juli 2023). 
+​[4]	“Algoritma Random Forest: Pengertian dan Kegunaannya - Trivusi.” https://www.trivusi.web.id/2022/08/algoritma-random-forest.html (diakses 6 Juli 2023). 
 
-​[5]	“House price prediction | Kaggle.” https://www.kaggle.com/datasets/shree1992/housedata (diakses 6 Juli 2023). 
+​[5]	“Algoritma Machine Learning yang Harus Kamu Pelajari di Tahun...” https://dqlab.id/algoritma-machine-learning-yang-perlu-dipelajari (diakses 6 Juli 2023). 
 
-​[6]	“Cara Kerja Algoritma Random Forest - Algoritma.” https://algorit.ma/blog/cara-kerja-algoritma-random-forest-2022/ (diakses 6 Juli 2023). 
+​[6]	“Gradient Boosting: Pengertian, Cara Kerja, dan Kegunaannya - Trivusi.” https://www.trivusi.web.id/2023/03/algoritma-gradient-boosting.html (diakses 6 Juli 2023). 
 
-​[7]	“Pengertian dan Jenis-jenis Distance Metric pada Machine Learning - Trivusi.” https://www.trivusi.web.id/2022/06/jenis-distance-metric.html (diakses 6 Juli 2023). 
+​[7]	“Rumah Adalah Bangunan Tempat Tinggal. Lalu, Apa saja Fungsinya?” https://berita.99.co/pengertian-rumah-adalah/ (diakses 6 Juli 2023). 
 
-​[8]	“6 Hal Penting yang Perlu Diperhatikan Saat Mencari Rumah Idaman - Lifestyle Fimela.com.” https://www.fimela.com/lifestyle/read/4832551/6-hal-penting-yang-perlu-diperhatikan-saat-mencari-rumah-idaman (diakses 6 Juli 2023). 
+​[8]	“Apa Itu Rumah? Ini Penjelasannya dari Berbagai Aspek dan 5 Fungsinya.” https://www.rumah.com/panduan-properti/apa-itu-rumah-60592 (diakses 6 Juli 2023). 
 
 ​[9]	“Apa Benar Kaum Milenial Susah Punya Rumah? Cek Faktanya.” https://www.cnbcindonesia.com/market/20210826182211-20-271567/apa-benar-kaum-milenial-susah-punya-rumah-cek-faktanya (diakses 6 Juli 2023). 
 
-​[10]	“Rumah Adalah Bangunan Tempat Tinggal. Lalu, Apa saja Fungsinya?” https://berita.99.co/pengertian-rumah-adalah/ (diakses 6 Juli 2023). 
+​[10]	“6 Hal Penting yang Perlu Diperhatikan Saat Mencari Rumah Idaman - Lifestyle Fimela.com.” https://www.fimela.com/lifestyle/read/4832551/6-hal-penting-yang-perlu-diperhatikan-saat-mencari-rumah-idaman (diakses 6 Juli 2023). 
 
-​[11]	“Apa Itu Rumah? Ini Penjelasannya dari Berbagai Aspek dan 5 Fungsinya.” https://www.rumah.com/panduan-properti/apa-itu-rumah-60592 (diakses 6 Juli 2023). 
+​[11]	“Algoritma K-Nearest Neighbor (KNN) untuk Klasifikasi - IlmudataPy.” https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/ (diakses 6 Juli 2023). 
+
+​[12]	“Pengertian dan Jenis-jenis Distance Metric pada Machine Learning - Trivusi.” https://www.trivusi.web.id/2022/06/jenis-distance-metric.html (diakses 6 Juli 2023). 
+
+​[13]	“Cara Kerja Algoritma Random Forest - Algoritma.” https://algorit.ma/blog/cara-kerja-algoritma-random-forest-2022/ (diakses 6 Juli 2023). 
 
