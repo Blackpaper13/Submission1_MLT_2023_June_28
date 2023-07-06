@@ -114,7 +114,7 @@ Gambar 5. Boosting Algorithm
         18|country| 4600 non-null| object |
 
 
-### Variable-variable pada dataset yang ditampilkan sebagai berikut :
+## Variable-variable pada dataset yang ditampilkan sebagai berikut :
 ***
 - date  merujuk kepada tanggal Rumah terjual
 - Price merujuk kepada harga rumah yang terjual dalam kurs USD Amerika Serikat
@@ -133,7 +133,7 @@ Gambar 5. Boosting Algorithm
 - city merujuk kepada kota
 - statezip merujuk kepada kode pos
 - country merujuk kepada negara
-### EDA - Handling Outliers 
+## EDA - Handling Outliers 
 setelah melakukan data understanding, selanjutnya adalah melakukan outliers terhadap data yang memiliki tingakt reduksi yang tinggi. hasilnya outliers seperti berikut:
 - Price </br>
   ![price_sns](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/0eea8994-75a6-455d-b73d-e012bc9efeec) </br>
@@ -158,7 +158,7 @@ hasil dari IQR dapat dilihat sebagai berikut: </br>
 ![IQR hasil](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/c2037817-c858-4809-b936-154865d91df4) </br>
 Gambar 12. IQR metode 
 
-### EDA - Univariate Analysis
+## EDA - Univariate Analysis
 ***
 Proses univariate data analysis pada masing-masing fitur dan numerik.
    - Categorical features
@@ -193,7 +193,7 @@ hasil dari *correlation matrix* dapat dijelaskan sebagai berikut :
 - sqft_living memiliki nilai korelasi yang tinggi dengan sqft_above. berarti untuk memprediksi harga rumah sangat berpengaruh dengan luang ruangan pada rumah dengan luas total bangunan.
 - pada bagian bedrooms, bathrooms, floors, dan yr_built memiliki nilai korelasi yang cukup tinggi dan dapat dijadikan sebagai pendukung dari prediksi harga rumah.
 
-### Data Preparation
+## Data Preparation
 ***
 setelah mengetahui dari nilai korelasi yang sudah didapatkan, lalu kita akan menyiapkan data dari dataset cat_fitur untuk dilakukan Encoding dengan metode *One Hot Encoding*. setelah itu, dilakukan Reduksi dimensi dari dengan PCA. karena sqft_above dengan sqft_living memiliki korelasi yang tinggi, sehingga dapat dilakukan Reduksi dimensi. hasil dapat dilihat pada gambar berikut :
 ![Capture](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/59045bc0-7c6b-45f2-a59f-1fdb9cebdfca)
@@ -204,7 +204,7 @@ Gambar 18. PCA antara sqft_living dengan sqft_above dan hasil perhintungan rasio
 setelah melakukan reduksi dimensi, dilanjutkan dengan melakukan standarisasi dengan tujuan agar mempersiapkan model dengan mengurangkan mean lalu dibagi dengan standar deviasi untuk menggeser distribusi. terakhir, melakukan train, test, dan split yang mana model ini terdiri atas 80:20 (train : test) yang berasal dari hasil standarisasi yang sudah dipersiapkan sebelumnya. hasilnya adalah untuk sample total yaitu 3692 :
 - dataset yang masuk kedalam train sebanyak 2953
 - dataset yang masuk kedalam test sebanyak 739.
-### Modelling
+## Modelling
 ***
 Pada tahap ini, saya menggunakan 3 metode Algoritma untuk melakukan prediksi, yaitu K-Nearest Neighbor (KNN), Random Forest, dan Algortima Boosting. berikut penjelasan dari ketiga metode algoritma ini:
 - Algoritma K-Nearest Neighbor (KNN)
@@ -247,7 +247,7 @@ Namun dari kelebihan tersebut, muncul masalah yang ada pada algoritma boosting i
 - mudah mengalami overfitting  / model yang prediksi di luar jangkauan
 - data yang diperlukan sangat besar
 
-### Evaluasi Modelling
+## Evaluasi Modelling
 ***
 pada bagian ini, saya melakukan evaluasi dari ketiga algoritma yang saya gunakan untuk dilakukan prediksi dari ketiga algoritma tersebut, manakah yang merupakan algoritma yang paling mendekati dari prediksi dari hasil test sebenarnya. 
 pertama, saya menggunakan rumus MSE atau *Mean Squared Error* yang berguna untuk menjumlahkan selisih kuadrat rata-rata nila sebenarnya dengan nilai prediksi. rumus MSE dapat dinyatakan sebagai berikut : 
