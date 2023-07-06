@@ -259,14 +259,14 @@ F_t = Nilai hasil Prediksi
 n = Banyaknya data.
 
 dengan rumus diatas, dapat kita memprediksi bahwa semakin kecil nilai regresi dari MSE, maka semakin baik model regresi untuk mempredksi nilai target.
-Hasil dair MSE dapat dilihat pada gambar yang bawah ini : 
-![adlawnknd](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/9b8f6dc8-6a5b-4345-ad80-48923b681dd5)
+Hasil dair MSE dapat dilihat pada gambar yang bawah ini : <br>
+![adlawnknd](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/9b8f6dc8-6a5b-4345-ad80-48923b681dd5)<br>
 Gambar 19. Hasil menggunakan MSE untuk 3 algoritma yang sudah dilakukan evaluasi.
 
 dari hasil evaluasi dari 3 algoritma tersebut, Algoritma Random Forest merupakan Algoritma yang membuat model yang mendekati dengan nilai prediksi sebenarnya.
-hasil dari ketiga algoritma tersebut dapat dilihat pada tabel berikut ini : 
+hasil dari ketiga algoritma tersebut dapat dilihat pada tabel berikut ini :<br> 
 
-![adawdaw](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/80923a92-0372-47ad-ac0a-0d3ad5f7dc40)
+![adawdaw](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/80923a92-0372-47ad-ac0a-0d3ad5f7dc40)<br>
 Gambar 20. Tabel hasil Evaluasi dari 3 algoritma 
 
 ### Referensi
