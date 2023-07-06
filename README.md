@@ -79,7 +79,7 @@ Data teknik Algoritma KNN, untuk menentukan jarak terdekat dari data yang sudah 
 ![random forest](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/eb576cac-b401-4fed-abf0-474864e7117b)
 Gambar 4. Random Forest.
    - **Algoritma Boosting**
-     Algoritma Boosting adalah metode algortima yang hasil analisis didapatkan dengan cara mengurangi kesalahan dalam label yang terdapat pada data[[8]]. Model Algortima seperti ini membuat kesalahan prediksi dipengaruhi oleh dari set data train yang dilatih secara berurutan untuk meningkatkan akurasi sistem sekeluruhan.
+     Algoritma Boosting adalah metode algortima yang hasil analisis didapatkan dengan cara mengurangi kesalahan dalam label yang terdapat pada data[[8]](http://etd.repository.ugm.ac.id/penelitian/detail/211569). Model Algortima seperti ini membuat kesalahan prediksi dipengaruhi oleh dari set data train yang dilatih secara berurutan untuk meningkatkan akurasi sistem sekeluruhan.
       
 ![xgboost_illustration](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/426be3e3-b39a-4da9-a032-674148f01750)
 Gambar 5. Boosting Algorithm
