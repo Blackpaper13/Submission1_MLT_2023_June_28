@@ -35,7 +35,7 @@ Berdasarkan latar belakang di atas, maka diperoleh rumusan masalah pada proyek i
 
 Berdasarkan rumusan masalah di atas, maka diperoleh tujuan dari proyek ini, yaitu:
 1. Untuk melakukan tahap persiapan data atau *data preparation*, agar data yang digunakan dapat dipakai untuk melatih model *machine learning*.
-2. Untuk membuat model *machine learning* dalam memprediksi harga dari batu permata dengan tingkat *error* model *machine learning* yang cukup rendah.
+2. Untuk membuat model *machine learning* dalam memprediksi harga dari Harga Rumah di USA dengan tingkat *error* model *machine learning* yang cukup rendah.
 
 
 ### Solution Statements
