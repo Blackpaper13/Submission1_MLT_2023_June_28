@@ -21,7 +21,7 @@ dalam beberapa tahun terakhir, menurut dari artikel dari CNBC Indonesia [[3]](ht
 
 **Gambar 2. Penyebab Milenial Susah Punya Rumah
 
-selain dari harga rumah yang berada di Indonesia, hal ini selaras dengan kenaikan suku bungan The Fed di USA sehingga harga rumah menjadi naik. oleh karena itu, latar belakang ini diangkat untuk membuat sebuah prediksi harga rumah yang ada di USA agar menjadi simulasi perhitungan untuk bagaimana tingkat prediksi yang bisa digunakan untuk mendapatkan prediksi harga yang cocok untuk calon penghuni rumah.
+selain dari harga rumah yang berada di Indonesia, hal ini selaras dengan kenaikan suku bungan The Fed di USA sehingga harga rumah menjadi naik hal ini dapat dilihat pada berita yang dikeluarkan oleh CNBC Indonesia tahun 2022 bulan Maret[[14]](https://www.cnbcindonesia.com/mymoney/20230615123235-72-446187/bunga-the-fed-bikin-warga-amerika-makin-susah), yang membuat sektor pinjaman uang menjadi tidak menarik. selain dari Pinjaman Uang, Pinjaman Rumah atau KPR rumah mengalami masalah karena banyak orang yang mengalami masalah bagi yang mengambil pinjaman rumah selama 15 tahun keatas karena bunga yang dipatok sebesar 6.7% walaupun itu sudah turun dibandingan dengan tahun sebelumnya. Oleh karena itu, latar belakang ini diangkat untuk membuat sebuah prediksi harga rumah yang ada di USA agar menjadi simulasi perhitungan untuk bagaimana tingkat prediksi yang bisa digunakan untuk mendapatkan prediksi harga yang cocok untuk calon penghuni rumah.
 
 ## Business Understanding
 
