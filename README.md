@@ -204,7 +204,7 @@ Gambar 18. PCA antara sqft_living dengan sqft_above dan hasil perhintungan rasio
 setelah melakukan reduksi dimensi, dilanjutkan dengan melakukan standarisasi dengan tujuan agar mempersiapkan model dengan mengurangkan mean lalu dibagi dengan standar deviasi untuk menggeser distribusi. terakhir, melakukan train, test, dan split yang mana model ini terdiri atas 80:20 (train : test) yang berasal dari hasil standarisasi yang sudah dipersiapkan sebelumnya. hasilnya adalah untuk sample total yaitu 3692 :
 - dataset yang masuk kedalam train sebanyak 2953
 - dataset yang masuk kedalam test sebanyak 739.
-## Modelling
+## Modeling
 ***
 Pada tahap ini, saya menggunakan 3 metode Algoritma untuk melakukan prediksi, yaitu K-Nearest Neighbor (KNN), Random Forest, dan Algortima Boosting. berikut penjelasan dari ketiga metode algoritma ini:
 - Algoritma K-Nearest Neighbor (KNN)
@@ -247,7 +247,7 @@ Namun dari kelebihan tersebut, muncul masalah yang ada pada algoritma boosting i
 - mudah mengalami overfitting  / model yang prediksi di luar jangkauan
 - data yang diperlukan sangat besar
 
-## Evaluasi Modelling
+## Evaluation
 ***
 pada bagian ini, saya melakukan evaluasi dari ketiga algoritma yang saya gunakan untuk dilakukan prediksi dari ketiga algoritma tersebut, manakah yang merupakan algoritma yang paling mendekati dari prediksi dari hasil test sebenarnya. 
 pertama, saya menggunakan rumus MSE atau *Mean Squared Error* yang berguna untuk menjumlahkan selisih kuadrat rata-rata nila sebenarnya dengan nilai prediksi. rumus MSE dapat dinyatakan sebagai berikut : 
@@ -269,5 +269,8 @@ hasil dari ketiga algoritma tersebut dapat dilihat pada tabel berikut ini :<br>
 ![adawdaw](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/80923a92-0372-47ad-ac0a-0d3ad5f7dc40)<br>
 Gambar 20. Tabel hasil Evaluasi dari 3 algoritma 
 
+Namun dari 10 dataset yang saya tampilkan beberapa nilai prediksi Algoritma Random Forest tidak sesuai karena bias akan prediksi. hal tesebut wajar karena itu merupakan salah satu kelemahan dari Algoritma Random Forest. namun, dari hasil diatas masih bisa digambarkan bahwa Algoritma selain Random Forest seperti KNN dan Boosting masih dapat digunakan untuk memprediksi nilai yang mendekati dengan nilai sebenarnya aktual. 
+
 ### Referensi
 ***
+[1] "Kasus diabetes anak meningkat ‘sangat mengkhawatirkan’, imbas makanan-minuman manis 'mudah dijangkau' - 'regulasi belum cukup melindungi,' kata peneliti," BBC, 3 Juli 2023. [Online]. Available: https://www.bbc.com/indonesia/articles/clj6rene4y7o. [Accessed: 3 Juli 2023].
