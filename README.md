@@ -122,7 +122,7 @@ Gambar 6. rumus dari Algortima Boosting secara general
         16|city|4600 non-null | object |
         17|statecity| 4600 non-null | object |
         18|country| 4600 non-null| object |
-        setelah dilakukan pengambilan data pada dataset data.csv, dilakukan indentifikasi variable yang dalam data.csv tersebut. hasilnya, berikut variable-variable pada dataset data.csv yang ditampilkan sebagai berikut :
+setelah dilakukan pengambilan data pada dataset data.csv, dilakukan indentifikasi variable yang dalam data.csv tersebut. hasilnya, berikut variable-variable pada dataset data.csv yang ditampilkan sebagai berikut :
         - date  dapat didefinisikan sebagai object yang merujuk kepada tanggal Rumah terjual tersebut 
         - Price dapat didefinisikan sebagai harga rumah dalam bentuk USD dollar yang tipe data adalah float64. Price ini merujuk kepada harga rumah yang terjual dalam kurs USD Amerika Serikat
         - Bedrooms dapat didefinisikan sebagai jumlah kamar pada satu rumah. tipe data adalah float64 yang mana merujuk kepada jumlah kamar tidur. keluaran data adalah 0,1,2, atau 3.
