@@ -51,8 +51,8 @@ Berdasarkan rumusan masalah dan tujuan di atas, maka disimpulkan beberapa solusi
 2. Setelah melakukan persiapan data, maka dilakukan dengan modelling dan evaluasi modelling dari *machine learning* dengan menggunakan 3 algoritma yang digunakan, yaitu Algoritma K-Nearest Neighbor(KNN), Algoritma Random Forest, dan Algoritma Boosting.
    - **Algoritma K-Nearest Neighbor (KNN)**
        Algoritma KNN merupakan algoritma klasifikasi yang bekerja dengan mengambil sejumlah K data terdekat (tetangganya) sebagai acuan untuk menentukan kelas dari data baru[[5]](https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/). Algoritma ini mengklasifikasikan data berdasarkan similarity atau kemiripan atau kedekatannya terhadap data lainnya.
-         ![knn](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/a0a6fe46-61a2-40d5-99b8-c76cb170ec6d)
-         Gambar 3. Konsep dan Cara Kerja Algoritma KNN
+![knn](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/a0a6fe46-61a2-40d5-99b8-c76cb170ec6d)
+Gambar 3. Konsep dan Cara Kerja Algoritma KNN
 
 
 Cara Kerja dari Algoritma KNN adalah:
@@ -81,7 +81,7 @@ Gambar 4. Random Forest.
      Algoritma Boosting adalah metode algortima yang hasil analisis didapatkan dengan cara mengurangi kesalahan dalam label yang terdapat pada data[[8]](http://etd.repository.ugm.ac.id/penelitian/detail/211569). Model Algortima seperti ini membuat kesalahan prediksi dipengaruhi oleh dari set data train yang dilatih secara berurutan untuk meningkatkan akurasi sistem sekeluruhan.
       
 ![xgboost_illustration](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/426be3e3-b39a-4da9-a032-674148f01750)
-        Gambar 5. Boosting Algorithm
+Gambar 5. Boosting Algorithm
         
 Cara kerja dari Algoritma ini sebenarnya merupaakn re-desain dari algoritma Random Forest, yaitu menggunakan pendekatan *Tree Decision*. namun, untuk menentukan dan tingkat akurasi prediksi sangat bergantung pada seberapa besar dataset yang dilatih dengan data yang dijadikan sample. dataset yang dilatih akan melakukan latihan atau train kepada dataset sample yang mana akan membentuk seperti decision tree. rumus untuk mencari Komputasi final dari algoritma Boosting adalah : <br>
 ![18-09-22 Ade 6](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/772999d0-ffca-4e2e-b7df-02f54beb3468) <br>
