@@ -83,8 +83,8 @@ Gambar 4. Random Forest.
 ![xgboost_illustration](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/426be3e3-b39a-4da9-a032-674148f01750)
         Gambar 5. Boosting Algorithm
         
-Cara kerja dari Algoritma ini sebenarnya merupaakn re-desain dari algoritma Random Forest, yaitu menggunakan pendekatan *Tree Decision*. namun, untuk menentukan dan tingkat akurasi prediksi sangat bergantung pada seberapa besar dataset yang dilatih dengan data yang dijadikan sample. dataset yang dilatih akan melakukan latihan atau train kepada dataset sample yang mana akan membentuk seperti decision tree. rumus untuk mencari Komputasi final dari algoritma Boosting adalah : 
-![18-09-22 Ade 6](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/772999d0-ffca-4e2e-b7df-02f54beb3468)
+Cara kerja dari Algoritma ini sebenarnya merupaakn re-desain dari algoritma Random Forest, yaitu menggunakan pendekatan *Tree Decision*. namun, untuk menentukan dan tingkat akurasi prediksi sangat bergantung pada seberapa besar dataset yang dilatih dengan data yang dijadikan sample. dataset yang dilatih akan melakukan latihan atau train kepada dataset sample yang mana akan membentuk seperti decision tree. rumus untuk mencari Komputasi final dari algoritma Boosting adalah : <br>
+![18-09-22 Ade 6](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/772999d0-ffca-4e2e-b7df-02f54beb3468) <br>
 Gambar 6. rumus dari Algortima Boosting secara general
       
 ## Data Understanding
@@ -100,7 +100,7 @@ Gambar 6. rumus dari Algortima Boosting secara general
         - Missing Values : N/A
         - Area : House Transaction / Property.
    2. **Deskripsi Variable**
-      Pada bagian ini, setelah penulis melakukan Download dataset yang penulis lakukan, penulis kemudian melakukan ekstraksi dari file House Price Prediction. bentuk file yang penulis ekstrack berbentuk *csv*. setelah itu penulis simpan di */content/files/* dan dilakukan pembersihan data *(Data Cleaning)*. lalu setelah dipastikan data yang sudah dibersihkan tidak bernilai null, penulis melakukan pengecekan nilai :
+      Pada bagian ini, setelah penulis melakukan Download dataset yang penulis lakukan, penulis kemudian melakukan ekstraksi dari file House Price Prediction. bentuk file yang penulis ekstrack berbentuk *csv*. setelah itu penulis simpan di */content/files/* dan dilakukan pembersihan data *(Data Cleaning)*. lalu setelah dipastikan data yang sudah dibersihkan tidak bernilai null, penulis melakukan pengecekan nilai : <br>
       Tabel 1. Tabel dataset pada data.csv
          **No**|**Column**|**Non-Null Count**|**Type Data**
         :-----:|:-----:|:-----:|:-----:|
@@ -194,8 +194,7 @@ Gambar 16. Rata-rata Price dengan date dan street </br>
 Gambar 17. Rata-rata price dengan city dan statezip
 </br>
 
-kemudian dari hasil ini dapat dikatakan bahwa price memiliki cukup pengaruh dengan kelima objek yang pada dictonary categorical_fitur. lalu kita melihat apakah bagian dictonary numerik_fitur memiliki nilai pengaruh yang berkaitan. hasil ini dapat dijabarkan dengan memakai pairplot. namun untuk lebih sederhana dan dapat dipahami, penulis menggunaakn metode *correlation_matrix*. hasilnya dapat dilihat pada gambar :
-berikut :
+kemudian dari hasil ini dapat dikatakan bahwa price memiliki cukup pengaruh dengan kelima objek yang pada dictonary categorical_fitur. lalu kita melihat apakah bagian dictonary numerik_fitur memiliki nilai pengaruh yang berkaitan. hasil ini dapat dijabarkan dengan memakai pairplot. namun untuk lebih sederhana dan dapat dipahami, penulis menggunaakn metode *correlation_matrix*. hasilnya dapat dilihat pada gambar berikut : <br>
 ![matrikx](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/f628cac5-f5d2-4942-9338-04b768a33112) </br>
 gambar 18. Matrix Korelasi dari numeric fitur
 hasil dari *correlation matrix* dapat dijelaskan sebagai berikut :
@@ -262,8 +261,8 @@ Dalam Algoritma ini, parameter yang saya gunakan untuk memakai fungsi dari rumus
     Namun, Kelemahan pada algoritma ini terletak pada tingkat akurasi yang terkadang terjadi *overfitting* yang beberapa kasus membuat tingkat akurasi menjadi bias. Hal ini terjadi karena pada saat klasifikasi untuk attribut dataset, sering terjadi perbedaan jumlah level yang berbeda sehingga attribut yang berperan besar pada dataset ini tidak bisa diandalkan.
 
 - Algoritma Boosting
-Pada algoritma ini terdapat 2 jenis Boosting, yaitu AdaBoost dan GradientBoost. AdaBoost *(Adaptive Boosting)* adalah algoritma yang pendekatannya memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi prediktor[[12]](https://dqlab.id/algoritma-machine-learning-yang-perlu-dipelajari). algoritma ini sangat mirip seperi random forest namun bedanya, forest yang dibangun adalah stumps atau pohon yang terbuat dari 1 cabang dan 2 anakan daun serta tidak memiliki bobot kandidat yang sama pada prediksinya. semakin kecil stumps, maka nilai kemungkinan akan semakin kecil.Sedangkan GradientBoost adalah sebuah algoritma yang mengandalkan *weak learner* atau bisa dikatakan sebagai model yang lemah untuk melakukan koreksi dan perbaikan prediksi sebelumnya dengan memperhitungkan kesalahan pada prediksi tersebut[[13]](https://www.trivusi.web.id/2023/03/algoritma-gradient-boosting.html). Jadi bisa dikatakan sebagai algoritma koreksi yang memakai model - model yang dianggap lemah untuk dilakukan koreksi. Cara kerja dari Algoritma Gradient Boost adalah menggabungkan beberapa model pada tree yang lemah untuk menjadi sebuah model yang baru dan lebih akurat. bedanya dengan AdaBoost  adalah pada tree, terdapat cabang-cabang yang mengeluarkan nilai yang lemah tapi tetap digunakan untuk membuat prediksi yang baru.
-Pada algoritma ini, saya menggunakan AdaBoost untuk dijadikan sebagai salah satu algoritma yang penulis gunakan. Rumus python yang digunakan adalah :
+    Pada algoritma ini terdapat 2 jenis Boosting, yaitu AdaBoost dan GradientBoost. AdaBoost *(Adaptive Boosting)* adalah algoritma yang pendekatannya memanfaatkan bagging dan boosting untuk mengembangkan peningkatan akurasi prediktor[[12]](https://dqlab.id/algoritma-machine-learning-yang-perlu-dipelajari). algoritma ini sangat mirip seperi random forest namun bedanya, forest yang dibangun adalah stumps atau pohon yang terbuat dari 1 cabang dan 2 anakan daun serta tidak memiliki bobot kandidat yang sama pada prediksinya. semakin kecil stumps, maka nilai kemungkinan akan semakin kecil.Sedangkan GradientBoost adalah sebuah algoritma yang mengandalkan *weak learner* atau bisa dikatakan sebagai model yang lemah untuk melakukan koreksi dan perbaikan prediksi sebelumnya dengan memperhitungkan kesalahan pada prediksi tersebut[[13]](https://www.trivusi.web.id/2023/03/algoritma-gradient-boosting.html). Jadi bisa dikatakan sebagai algoritma koreksi yang memakai model - model yang dianggap lemah untuk dilakukan koreksi. Cara kerja dari Algoritma Gradient Boost adalah menggabungkan beberapa model pada tree yang lemah untuk menjadi sebuah model yang baru dan lebih akurat. bedanya dengan AdaBoost  adalah pada tree, terdapat cabang-cabang yang mengeluarkan nilai yang lemah tapi tetap digunakan untuk membuat prediksi yang baru.
+    Pada algoritma ini, saya menggunakan AdaBoost untuk dijadikan sebagai salah satu algoritma yang penulis gunakan. Rumus python yang digunakan adalah :
     ```python
     model_boosting = AdaBoostRegressor(n_estimators=50, learning_rate=0.05, random_state=55)
     ```
@@ -319,17 +318,17 @@ Hasil dari 10 dataset yang penulis tampilkan dan nilai akurasi yang sudah ditamp
 
 ### Referensi
 ***
-​​[1]	“Analisis Klasifikasi Menggunakan Metode Gradient Boosting Machine (GBM) dan Light Gradient Boosting Machine (LGBM).” http://etd.repository.ugm.ac.id/penelitian/detail/211569 (diakses 6 Juli 2023). 
-​[2]	“House price prediction | Kaggle.” https://www.kaggle.com/datasets/shree1992/housedata (diakses 6 Juli 2023). 
-​[3]	“What’s the KNN?. Understanding the Lazy Learner… | by Jisha Obukwelu | Nerd For Tech | Medium.” https://medium.com/nerd-for-tech/whats-the-knn-74e84458bd24 (diakses 6 Juli 2023). 
-​[4]	“Algoritma Random Forest: Pengertian dan Kegunaannya - Trivusi.” https://www.trivusi.web.id/2022/08/algoritma-random-forest.html (diakses 6 Juli 2023). 
-​[5]	“Algoritma Machine Learning yang Harus Kamu Pelajari di Tahun...” https://dqlab.id/algoritma-machine-learning-yang-perlu-dipelajari (diakses 6 Juli 2023). 
-​[6]	“Gradient Boosting: Pengertian, Cara Kerja, dan Kegunaannya - Trivusi.” https://www.trivusi.web.id/2023/03/algoritma-gradient-boosting.html (diakses 6 Juli 2023). 
-​[7]	“Rumah Adalah Bangunan Tempat Tinggal. Lalu, Apa saja Fungsinya?” https://berita.99.co/pengertian-rumah-adalah/ (diakses 6 Juli 2023). 
-​[8]	“Apa Itu Rumah? Ini Penjelasannya dari Berbagai Aspek dan 5 Fungsinya.” https://www.rumah.com/panduan-properti/apa-itu-rumah-60592 (diakses 6 Juli 2023). 
-​[9]	“Apa Benar Kaum Milenial Susah Punya Rumah? Cek Faktanya.” https://www.cnbcindonesia.com/market/20210826182211-20-271567/apa-benar-kaum-milenial-susah-punya-rumah-cek-faktanya (diakses 6 Juli 2023). 
-​[10]	“6 Hal Penting yang Perlu Diperhatikan Saat Mencari Rumah Idaman - Lifestyle Fimela.com.” https://www.fimela.com/lifestyle/read/4832551/6-hal-penting-yang-perlu-diperhatikan-saat-mencari-rumah-idaman (diakses 6 Juli 2023). 
-​[11]	“Algoritma K-Nearest Neighbor (KNN) untuk Klasifikasi - IlmudataPy.” https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/ (diakses 6 Juli 2023). 
-​[12]	“Pengertian dan Jenis-jenis Distance Metric pada Machine Learning - Trivusi.” https://www.trivusi.web.id/2022/06/jenis-distance-metric.html (diakses 6 Juli 2023). 
-​[13]	“Cara Kerja Algoritma Random Forest - Algoritma.” https://algorit.ma/blog/cara-kerja-algoritma-random-forest-2022/ (diakses 6 Juli 2023). 
-​[14]	“Bunga The Fed Bikin Warga Amerika Makin Susah.” https://www.cnbcindonesia.com/mymoney/20230615123235-72-446187/bunga-the-fed-bikin-warga-amerika-makin-susah (diakses 6 Juli 2023). 
+[1]	“Analisis Klasifikasi Menggunakan Metode Gradient Boosting Machine (GBM) dan Light Gradient Boosting Machine (LGBM).” http://etd.repository.ugm.ac.id/penelitian/detail/211569 (diakses 6 Juli 2023). <br>
+​[2]	“House price prediction | Kaggle.” https://www.kaggle.com/datasets/shree1992/housedata (diakses 6 Juli 2023). <br>
+​[3]	“What’s the KNN?. Understanding the Lazy Learner… | by Jisha Obukwelu | Nerd For Tech | Medium.” https://medium.com/nerd-for-tech/whats-the-knn-74e84458bd24 (diakses 6 Juli 2023). <br>
+​[4]	“Algoritma Random Forest: Pengertian dan Kegunaannya - Trivusi.” https://www.trivusi.web.id/2022/08/algoritma-random-forest.html (diakses 6 Juli 2023). <br>
+​[5]	“Algoritma Machine Learning yang Harus Kamu Pelajari di Tahun...” https://dqlab.id/algoritma-machine-learning-yang-perlu-dipelajari (diakses 6 Juli 2023). <br>
+​[6]	“Gradient Boosting: Pengertian, Cara Kerja, dan Kegunaannya - Trivusi.” https://www.trivusi.web.id/2023/03/algoritma-gradient-boosting.html (diakses 6 Juli 2023). <br>
+​[7]	“Rumah Adalah Bangunan Tempat Tinggal. Lalu, Apa saja Fungsinya?” https://berita.99.co/pengertian-rumah-adalah/ (diakses 6 Juli 2023). <br>
+​[8]	“Apa Itu Rumah? Ini Penjelasannya dari Berbagai Aspek dan 5 Fungsinya.” https://www.rumah.com/panduan-properti/apa-itu-rumah-60592 (diakses 6 Juli 2023). <br>
+​[9]	“Apa Benar Kaum Milenial Susah Punya Rumah? Cek Faktanya.” https://www.cnbcindonesia.com/market/20210826182211-20-271567/apa-benar-kaum-milenial-susah-punya-rumah-cek-faktanya (diakses 6 Juli 2023). <br>
+​[10]	“6 Hal Penting yang Perlu Diperhatikan Saat Mencari Rumah Idaman - Lifestyle Fimela.com.” https://www.fimela.com/lifestyle/read/4832551/6-hal-penting-yang-perlu-diperhatikan-saat-mencari-rumah-idaman (diakses 6 Juli 2023). <br>
+​[11]	“Algoritma K-Nearest Neighbor (KNN) untuk Klasifikasi - IlmudataPy.” https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/ (diakses 6 Juli 2023). <br>
+​[12]	“Pengertian dan Jenis-jenis Distance Metric pada Machine Learning - Trivusi.” https://www.trivusi.web.id/2022/06/jenis-distance-metric.html (diakses 6 Juli 2023). <br>
+​[13]	“Cara Kerja Algoritma Random Forest - Algoritma.” https://algorit.ma/blog/cara-kerja-algoritma-random-forest-2022/ (diakses 6 Juli 2023). <br>
+​[14]	“Bunga The Fed Bikin Warga Amerika Makin Susah.” https://www.cnbcindonesia.com/mymoney/20230615123235-72-446187/bunga-the-fed-bikin-warga-amerika-makin-susah (diakses 6 Juli 2023). <br>
