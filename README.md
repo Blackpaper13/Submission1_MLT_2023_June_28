@@ -123,23 +123,23 @@ Gambar 6. rumus dari Algortima Boosting secara general
         17|statecity| 4600 non-null | object |
         18|country| 4600 non-null| object |
 setelah dilakukan pengambilan data pada dataset data.csv, dilakukan indentifikasi variable yang dalam data.csv tersebut. hasilnya, berikut variable-variable pada dataset data.csv yang ditampilkan sebagai berikut :
-        - date  dapat didefinisikan sebagai object yang merujuk kepada tanggal Rumah terjual tersebut 
-        - Price dapat didefinisikan sebagai harga rumah dalam bentuk USD dollar yang tipe data adalah float64. Price ini merujuk kepada harga rumah yang terjual dalam kurs USD Amerika Serikat
-        - Bedrooms dapat didefinisikan sebagai jumlah kamar pada satu rumah. tipe data adalah float64 yang mana merujuk kepada jumlah kamar tidur. keluaran data adalah 0,1,2, atau 3.
-        - Bathrooms merujuk kepada jumlah kamar mandi. tipe data adalah float64 yang keluaran data berbentuk 0,1,2,atau 3. 
-        - sqft_living merujuk kepada luas rumah yang keluaran data yang tipe data adalah int64. 
-        - sqft_lot merujuk kepada luas tanah keluaran data yang tipe data adalah int64. 
-        - waterfront merujuk kepada apakah ada air sekitar rumah keluaran data yang tipe data adalah float64. 
-        - view merujuk kepada pemandangan luar rumah keluaran data yang tipe data adalah int64. 
-        - condition merujuk kepada kondisi rumah yang tipe datanya adalah int64 nilaianya 1 (Ada view) atau 0 (tidak ada view)
-        - sqft_above merujuk kepada luas total rumah keluaran data yang tipe data adalah int64. 
-        - sqft_basement merujuk kepada luas ruangan basement keluaran data yang tipe data adalah int64. 
-        - yr_built merujuk kepada tahun berdiri bangunan rumah keluaran data yang tipe data adalah int64. 
-        - yr_renovated merujuk kepada tahun rumah terakhir direnovasi keluaran data yang tipe data adalah int64. 
-        - street merujuk kepada jalan rumah keluaran data yang tipe data adalah object. data yang ditampilkan adalah list nama-nama jalan pada rumah yang terdaftar di data.csv
-        - city merujuk kepada kota keluaran data yang tipe data adalah object. keluaran adalah nama-nama kota di USA 
-        - statezip merujuk kepada kode pos keluaran data yang tipe data adalah object. keluaran adalaah kodepos USA pada rumah terdaftar.
-        - country merujuk kepada negara keluaran data yang tipe data adalah object.keluaran nilai adalah USA. 
+- date  dapat didefinisikan sebagai object yang merujuk kepada tanggal Rumah terjual tersebut 
+- Price dapat didefinisikan sebagai harga rumah dalam bentuk USD dollar yang tipe data adalah float64. Price ini merujuk kepada harga rumah yang terjual dalam kurs USD Amerika Serikat
+- Bedrooms dapat didefinisikan sebagai jumlah kamar pada satu rumah. tipe data adalah float64 yang mana merujuk kepada jumlah kamar tidur. keluaran data adalah 0,1,2, atau 3.
+- Bathrooms merujuk kepada jumlah kamar mandi. tipe data adalah float64 yang keluaran data berbentuk 0,1,2,atau 3. 
+- sqft_living merujuk kepada luas rumah yang keluaran data yang tipe data adalah int64. 
+- sqft_lot merujuk kepada luas tanah keluaran data yang tipe data adalah int64. 
+- waterfront merujuk kepada apakah ada air sekitar rumah keluaran data yang tipe data adalah float64. 
+- view merujuk kepada pemandangan luar rumah keluaran data yang tipe data adalah int64. 
+- condition merujuk kepada kondisi rumah yang tipe datanya adalah int64 nilaianya 1 (Ada view) atau 0 (tidak ada view)
+- sqft_above merujuk kepada luas total rumah keluaran data yang tipe data adalah int64. 
+- sqft_basement merujuk kepada luas ruangan basement keluaran data yang tipe data adalah int64. 
+- yr_built merujuk kepada tahun berdiri bangunan rumah keluaran data yang tipe data adalah int64. 
+- yr_renovated merujuk kepada tahun rumah terakhir direnovasi keluaran data yang tipe data adalah int64. 
+- street merujuk kepada jalan rumah keluaran data yang tipe data adalah object. data yang ditampilkan adalah list nama-nama jalan pada rumah yang terdaftar di data.csv
+- city merujuk kepada kota keluaran data yang tipe data adalah object. keluaran adalah nama-nama kota di USA 
+- statezip merujuk kepada kode pos keluaran data yang tipe data adalah object. keluaran adalaah kodepos USA pada rumah terdaftar.
+- country merujuk kepada negara keluaran data yang tipe data adalah object.keluaran nilai adalah USA. 
 
 ### Handle Missing Value
 dengan menggunakan 3 cara, yaitu mencari variable yang mempengaruhi nilai pada harga rumah, yaitu harga, kamar tidur, kamar mandi, ruang tamu, luas tanah dan bangunan dan air. dengan menggunakan syntak (rumah.waterfront == 0).sum() pada masing-masing variable hasilnya nilainya tidak mengeluarkan null alias tidak ada nilai missing. namun untuk lebih menyakinkan penulis menggunakan syntak *isnull().sum()* dan didapatkan bahwa dataset pada data.csv tidak ada nilai null.
