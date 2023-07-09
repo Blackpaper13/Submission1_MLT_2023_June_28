@@ -181,7 +181,8 @@ Gambar 14. Cat dan Num Features
 
 selanjutnya dilakukan analisis numeric features distribution dari array numeric, hasilnya bahwa nilai distribusi pada price, sqft_living, sqft_lot, dan sqft_above memiliki distribusi yang cukup baik, yang mana dapat kita lihat pada gambar berikut : 
 ![pairplot](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/7923fccd-3619-48f8-aaef-abb9df7ce4ba)</br>
-Gambar 15. Distribusi nilai pada numeric features.
+Gambar 15. Distribusi nilai pada numeri![correlation](https://github.com/Blackpaper13/Submission1_MLT_2023_June_28/assets/63518506/7ad36712-0761-4115-b8a0-5155fbf3f7e9)
+c features.
 
 sehingga dapat kita simpulkan bahwa untuk mencari korelasi yang terbaik dapat menggunakan price dahulu untuk mencari korelasi dengan categorical features.
 
